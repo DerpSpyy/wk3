@@ -218,3 +218,51 @@ footer ul li a {
     font-size: 24px;
     text-align: center;
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 400px;
+    display: none; // This hides all slides initially.
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+.slides img:first-child {
+    display: block; /* Ensure the first image is visible initially */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px; /* Adjust this value based on the size of the arrows */
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
